@@ -1,0 +1,13 @@
+size(400,400);
+background(20, 0, 40);
+smooth();
+fill(255, 90);
+beginShape();
+curveVertex(290,240); 
+curveVertex(260,90); 
+curveVertex(150,100); 
+curveVertex(240,100);
+curveVertex(200,180);
+curveVertex(240,100);
+curveVertex(300,280);
+endShape();

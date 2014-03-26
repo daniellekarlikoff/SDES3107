@@ -1,7 +1,3 @@
-//Create a composition with a series of lines and ellipses. 
-//Use an if structure to select which lines of code to run
-//and which to skip.
-
 size(200, 300);
 background(255);
 fill(30, 0, 50, 60);
@@ -18,5 +14,8 @@ ellipse(50, 50, 36, 36);
 }
 if (b < 10) {
   ellipse(30, 60, 30, 40);
+} else {
+  rect(33, 33, 34, 34);
 }
+
 
