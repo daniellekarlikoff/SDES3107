@@ -3,17 +3,20 @@
 
 
 void  setup() {
-   size(100,  100);
- smooth();
-   strokeWeight(1);
+size(200, 200);
+background(255);
+smooth();
+strokeWeight(4);
 }
 void draw() {
    background(100);
    //  If  the  ‘A’  key  is  pressed  draw  a  line
  if ((keyPressed == true) && (key == 'A')) {
       line(50,  25,  50,  75);
-   }  else  {  //  Otherwise,  draw  an  ellipse
+   }  else  {  //  Otherwise,  draw these)
       ellipse(50,  50,  50,  50);
+      ellipse(100,  100,  100,  100);
+      ellipse(75,  75,  75,  75);
       
    }
 }
