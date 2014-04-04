@@ -43,8 +43,9 @@ void draw(){
   strokeCap(SQUARE);
   smooth();
   noFill();
-  background(255);
+  background(50, 170, 255);
   translate(width/2,height/2);
+  stroke(255, 60);
 
   int circleResolution = (int) map(mouseY, 0,height, 2,80);
   float radius = mouseX-width/10 + 0.5;
