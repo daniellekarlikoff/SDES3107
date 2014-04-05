@@ -34,17 +34,25 @@ import java.util.Calendar;
 boolean savePDF = false;
 
 void setup(){
-  size(550, 550);
-//  noCursor();
- 
- 
- 
+size(550, 550);
+frameRate(100);
+fill(0);
   
 }
 
 void draw(){
   if (savePDF) beginRecord(PDF, timestamp()+".pdf");
 
+
+// The angles increase as the mouse moves from the upper-right
+// corner of the screen to the lower-left corner
+
+float angle = atan2(mouseY, mouseX); 
+float deg = degrees(angle);
+println(deg);
+ellipse(mouseX, mouseY, 20, 20); 
+rotate(angle);
+line(0, 0, 50, 0);
 
 
 
@@ -58,7 +66,7 @@ void draw(){
 
   int circleResolution = (int) map(mouseY, 0,height, 2,80);
   float radius = mouseX-width/10 + 0.5;
-  float angle = TWO_PI/circleResolution;
+  float angle1 = TWO_PI/circleResolution;
 
   strokeWeight(mouseY/100);  
 
@@ -71,6 +79,9 @@ void draw(){
      line(200,-200, x, y);
     vertex(x, y);
   }
+ 
+ 
+
  
  
  // make the lines of the shape a more solid form through colour changes
