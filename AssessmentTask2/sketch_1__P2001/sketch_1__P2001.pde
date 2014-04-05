@@ -55,8 +55,6 @@ rotate(angle);
 line(0, 0, 50, 0);
 
 
-
-
   strokeCap(SQUARE);
   smooth();
   noFill();
@@ -80,8 +78,6 @@ line(0, 0, 50, 0);
     vertex(x, y);
   }
  
- 
-
  
  
  // make the lines of the shape a more solid form through colour changes
@@ -119,7 +115,7 @@ for(int i = 0; i < 300; i++) {
   fill(hue, 200, 150, transparency);
   rect(x*11, y*2, size, size);
   
-  stroke(255, 40);
+  stroke(255, 0, 0);
   fill(255, 0, 0, transparency);
   ellipse(x, y, 10, 10);
   
