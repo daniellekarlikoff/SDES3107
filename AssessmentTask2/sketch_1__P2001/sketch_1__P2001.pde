@@ -35,31 +35,74 @@ boolean savePDF = false;
 
 void setup(){
   size(550, 550);
+ 
+ 
+ 
+ 
+ 
+  
 }
 
 void draw(){
   if (savePDF) beginRecord(PDF, timestamp()+".pdf");
+
+
+
+
 
   strokeCap(SQUARE);
   smooth();
   noFill();
   background(50, 170, 255);
   translate(width/2,height/2);
-  stroke(255, 60);
+  stroke(255, 40);
 
   int circleResolution = (int) map(mouseY, 0,height, 2,80);
   float radius = mouseX-width/10 + 0.5;
   float angle = TWO_PI/circleResolution;
 
-  strokeWeight(mouseY/100);
+  strokeWeight(mouseY/100);  
 
   beginShape();
   for (int i=0; i<=circleResolution; i++){
     float x = cos(angle*i) * radius;
     float y = sin(angle+i) * radius;
     line(0, 0, x, y);
-    // vertex(x, y);
+     line(-200, 200, x, y);
+     line(200,-200, x, y);
+    vertex(x, y);
   }
+  
+  
+// make random ellipses and rectangles to appear
+//bottom right corner
+//play with hue/HSB colour mode
+
+int x = 250;
+int y = 250;
+float size = 150;
+float hue = 100;
+float transparency = 50;
+colorMode(HSB, 360, 100, 100);
+float v = 0.0;
+
+// 0 1 2 3 4 ..... 99
+for(int i = 0; i < 300; i++) {
+  x = round(random(height*2));
+  y = round(random(width*20));
+
+  size = random(10,40);
+  hue = random(90,250);
+  transparency = random(100);
+  
+  fill(hue, 200, 150, transparency);
+  rect(x*11, y*2, size, size);
+  
+  stroke(255, 40);
+  fill(255, 0, 0, transparency);
+  ellipse(x, y, 10, 10);
+  
+}
   endShape();
 
   if (savePDF) {
