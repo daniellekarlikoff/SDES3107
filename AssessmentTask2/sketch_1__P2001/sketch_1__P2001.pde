@@ -35,8 +35,7 @@ boolean savePDF = false;
 
 void setup(){
   size(550, 550);
- 
- 
+//  noCursor();
  
  
  
@@ -72,6 +71,17 @@ void draw(){
      line(200,-200, x, y);
     vertex(x, y);
   }
+ 
+ 
+ // make the lines of the shape a more solid form through colour changes
+//change background colour when the cursor moves around the screen
+    colorMode(HSB, 100, 360, 100);
+  rectMode(CENTER); 
+  noStroke();
+  background(mouseY/4, 100, 100);
+
+  fill(360-mouseY/3, 100, 100);
+  rect(550, 0, mouseX+1, mouseX+1);
   
   
 // make random ellipses and rectangles to appear
@@ -102,6 +112,8 @@ for(int i = 0; i < 300; i++) {
   fill(255, 0, 0, transparency);
   ellipse(x, y, 10, 10);
   
+  
+
 }
   endShape();
 
