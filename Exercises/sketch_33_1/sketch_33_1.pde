@@ -23,6 +23,7 @@ void draw() {
   if (frame == data.length) {
     frame =0;
   }
+  stroke(255, 0, 0);
   ellipse (28, data[frame], 20, 20);
   
 }

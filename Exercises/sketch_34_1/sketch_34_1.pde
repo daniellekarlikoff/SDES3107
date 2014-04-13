@@ -1,3 +1,7 @@
+//1. Load a sequence of related images into an array and use 
+//them to create a linear animation.
+
+
 int numFrames = 15; // The number of animationframes
 int frame = 0; // The frame to display
 int xCoordinate = 0;
@@ -5,8 +9,9 @@ int xCoordinate = 0;
 PImage[] images = new PImage[numFrames]; //Image array
 
 void setup() {
-  size(500, 100);
+  size(500, 300);
   frameRate(30);
+
 
 images[0] = loadImage("00.jpg");
 images[1] = loadImage("01.jpg");
@@ -24,19 +29,39 @@ images[12] = loadImage("12.jpg");
 images[13] = loadImage("13.jpg");
 images[14] = loadImage("14.jpg");
 
+
+
 }
 
 void draw() {
-  background(255);
-  xCoordinate+=4;
+  background(255, 0, 0);
+  xCoordinate+=5;
   if (xCoordinate > width) {
-    xCoordinate = -60;
+    xCoordinate = -30;
   
+  frameRate(100);
+ images[0] = loadImage("00.jpg");
+images[1] = loadImage("01.jpg");
+images[2] = loadImage("02.jpg");
+images[3] = loadImage("03.jpg"); 
+images[4] = loadImage("04.jpg");
+images[5] = loadImage("05.jpg"); 
+images[6] = loadImage("06.jpg"); 
+images[7] = loadImage("07.jpg"); 
+images[8] = loadImage("08.jpg"); 
+images[9] = loadImage("09.jpg");
+images[10] = loadImage("10.jpg");
+images[11] = loadImage("11.jpg");
+images[12] = loadImage("12.jpg");
+images[13] = loadImage("13.jpg");
+images[14] = loadImage("14.jpg");
+
   }
 frame++;
 if (frame == numFrames) {
-frame = 0;
+frame = 10;
 }
-image(images[frame], xCoordinate, 0);
+image(images[frame], xCoordinate, 100);
 }
+  
   

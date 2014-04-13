@@ -3,13 +3,13 @@
 
 
 void  setup() {
-size(200, 200);
-background(255);
+size(400, 200);
+
 smooth();
 strokeWeight(4);
 }
 void draw() {
-   background(100);
+   background(255, 0, 0);
    //  If  the  ‘A’  key  is  pressed  draw  a  line
  if ((keyPressed == true) && (key == 'A')) {
       line(50,  25,  50,  75);

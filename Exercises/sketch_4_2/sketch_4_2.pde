@@ -2,7 +2,8 @@
 //increasing space between each.
 
 background (250);
-size(400, 400);
+stroke(255, 0, 0);
+size(800, 200);
 float y = 20;
 line(0, y, width, y);
 y = y * 1.6; // Assign 32.0 to y

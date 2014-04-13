@@ -1,7 +1,8 @@
-
+//1. Write a function to draw a shape to the screen multiple
+//times, each at a different position.
 void  setup()  {
-    size(500,500);
-    background(100);
+    size(300,300);
+    background(255, 0, 0);
  smooth();
 
 }
@@ -17,4 +18,3 @@ void myFunction(int size, int number, int x, int y) {
     size-=10;
   }
 }
-  
