@@ -69,11 +69,24 @@ void setup(){
 
 
 void draw(){
+   
+  
+  
+  
+PImage img;
+img = loadImage("qFfCj.png");
+image(img, 0, 0);
+tint(255, 100);
+
+ 
+  
   // floating towards mouse position
   if (mouseX != 0 || mouseY != 0) {
     centerX += (mouseX-centerX) * 0.01;
     centerY += (mouseY-centerY) * 0.01;
   }
+  
+
   
 
 //using a for structure to draw elements to the screen
@@ -96,12 +109,7 @@ if (mousePressed == true) {
 } }
 
 
-
-
-
-
 {
-
 
 
 {
