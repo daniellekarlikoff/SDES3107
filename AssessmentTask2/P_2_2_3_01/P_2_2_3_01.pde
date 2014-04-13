@@ -71,6 +71,7 @@ font = loadFont("ITCAvantGardePro-Bk-100.vlw");
 
   stroke(0, 50);
   background(20, 40, 90);
+  frameRate(100);
 }
 
 
@@ -79,6 +80,19 @@ z += 3.5;
 if (z > width) {
 z = -height; }
 image(img, z, 0);
+  
+  
+// Invert cursor position to create a secondary response
+float p = mouseX;
+float o = mouseY;
+float ix = width - mouseX;
+float iy = mouseY - height; // Inverse Y background(126);
+fill(255, 30, 10, 40);
+ellipse(p, height/2, o, o);
+fill(0, 30, 79, 129);
+ellipse(ix, height/2, iy, iy);  
+    
+  
   
 //adding some typography
 
