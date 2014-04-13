@@ -50,7 +50,6 @@ boolean freeze = false;
 
 PImage img;
 float z;
-
 PFont font;
 
 void setup(){
