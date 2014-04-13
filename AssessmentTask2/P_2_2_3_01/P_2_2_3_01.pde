@@ -51,12 +51,15 @@ boolean freeze = false;
 PImage img;
 float z;
 
+PFont font;
+
 void setup(){
   size(displayWidth, displayHeight);
   smooth();
   img = loadImage("qFfCj.png");
  
-     
+font = loadFont("ITCAvantGardePro-Bk-100.vlw");
+
   // init form
   centerX = width/2; 
   centerY = height/2;
@@ -67,23 +70,36 @@ void setup(){
   }
 
   stroke(0, 50);
-  background(0, 40, 90);
-
+  background(20, 40, 90);
 }
+
 
 void draw(){
 z += 3.5;
 if (z > width) {
 z = -height; }
-              image(img, z, 0);
+image(img, z, 0);
   
-//PImage img;
-//img = loadImage("qFfCj.png");
-//image(img, 0, 0);
-//tint(55, 30, 70, 20);
+//adding some typography
 
- 
-  
+textFont(font);
+fill(0, 80);
+text("q", 100, 370);
+text("t", 140, 450);
+text("s", 190, 490);
+text("i", 230, 570);
+fill(270, 100);
+text("o", 310, 640);
+text("l", 350, 710);
+text("n", 390, 950);
+text("M", 730, 820);
+text("d", 390, 500);
+text("l", 450, 710);
+fill(0, 80);
+text("n", 890, 450);
+text("M", 530, 320);
+text("d", 790, 200);
+
   // floating towards mouse position
   if (mouseX != 0 || mouseY != 0) {
     centerX += (mouseX-centerX) * 0.01;
