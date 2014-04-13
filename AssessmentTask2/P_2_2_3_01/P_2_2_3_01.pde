@@ -75,13 +75,42 @@ void draw(){
     centerY += (mouseY-centerY) * 0.01;
   }
   
-   
+
+//using a for structure to draw elements to the screen
+// at each frame via the cursor
+//gradiate from green to blue
+
+
+{
+colorMode(HSB, 360, 100, 100);
+if (mousePressed == true) {
+                fill(0, 26);
+              } else {
+                fill(255, 26);
+              }
+              for (int i = 0; i < 6; i++) {
+                float newHue = 200 - (i*10.2);
+                stroke(newHue, 70, 80);
+                ellipse(mouseX + i*i, mouseY, i, 200);
+
+} }
+
+
+
+
+
+
+{
+
+
+
 {
   
-  //numerous lines in different angles and directions
+//numerous lines in different angles and directions
   
-  stroke(255, 0, 0);
-float y = 20;
+
+float y = 100;
+
 line(80, y, displayHeight, 200);
 y = y * 2;
 line(50, y, displayHeight, 300);
@@ -94,6 +123,7 @@ line(30, y, displayHeight, 20);
 y= y * 2.3;
 line(0, y, width, 30);
 y = y / 1.6; 
+
 line(200, y, displayHeight, 100);
 y = y * 3.6;
 line(300, y, displayHeight, 100);
@@ -143,7 +173,7 @@ line(200, width, height, 200);
   endShape();
 }
 
-
+}
 // events
 void mousePressed() {
   //init form on mouse position
