@@ -48,12 +48,15 @@ float[] y = new float[formResolution];
 boolean filled = false;
 boolean freeze = false;
 
+PImage img;
+float z;
 
 void setup(){
   size(displayWidth, displayHeight);
   smooth();
-    
-
+  img = loadImage("qFfCj.png");
+ 
+     
   // init form
   centerX = width/2; 
   centerY = height/2;
@@ -64,19 +67,20 @@ void setup(){
   }
 
   stroke(0, 50);
-  background(255);
+  background(0, 40, 90);
+
 }
 
-
 void draw(){
-   
+z += 3.5;
+if (z > width) {
+z = -height; }
+              image(img, z, 0);
   
-  
-  
-PImage img;
-img = loadImage("qFfCj.png");
-image(img, 0, 0);
-tint(255, 100);
+//PImage img;
+//img = loadImage("qFfCj.png");
+//image(img, 0, 0);
+//tint(55, 30, 70, 20);
 
  
   
